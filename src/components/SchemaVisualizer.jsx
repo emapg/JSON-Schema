@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactJson from 'react-json-view';
+import ReactJson from 'react-json-tree'; // change to react-json-tree
 import { useSchemaStore } from '../stores/schemaStore';
 import { useThemeStore } from '../stores/themeStore';
 
