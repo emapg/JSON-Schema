@@ -1,5 +1,5 @@
 import React from 'react';
-import { JsonTree } from 'react-json-tree';  // Import from react-json-tree
+import ReactJsonTree from 'react-json-tree';  // Use default import
 import { useSchemaStore } from '../stores/schemaStore';
 import { useThemeStore } from '../stores/themeStore';
 
@@ -13,10 +13,9 @@ function SchemaVisualizer() {
         Schema Visualization
       </h3>
       <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-        <JsonTree
-          data={schema}  // Use 'data' instead of 'src'
+        <ReactJsonTree
+          data={schema}  // Use 'data' prop instead of 'src'
           theme={theme === 'dark' ? 'monokai' : 'rjv-default'}
-          invertTheme={theme !== 'dark'}  // Apply theme inversion if necessary
         />
       </div>
     </div>
