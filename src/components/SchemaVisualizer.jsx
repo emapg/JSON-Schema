@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactJson from 'react-json-tree'; // change to react-json-tree
+import { JsonTree } from 'react-json-tree';  // Correct named import
 import { useSchemaStore } from '../stores/schemaStore';
 import { useThemeStore } from '../stores/themeStore';
 
@@ -13,13 +13,9 @@ function SchemaVisualizer() {
         Schema Visualization
       </h3>
       <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-        <ReactJson
-          src={schema}
+        <JsonTree
+          data={schema}  // Use 'data' prop instead of 'src'
           theme={theme === 'dark' ? 'monokai' : 'rjv-default'}
-          name={false}
-          collapsed={2}
-          displayDataTypes={false}
-          enableClipboard={true}
         />
       </div>
     </div>
